@@ -8,5 +8,7 @@
   <%= f.text_field :description%>
   <%= f.label :cost %>
   <%= f.text_field :cost %>
+  <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
+<%= f.file_field :avatar %>
   <%= f.submit  %>
 <% end %>

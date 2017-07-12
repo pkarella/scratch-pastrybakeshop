@@ -1,6 +1,7 @@
 <div class="jumbotron">
   <% if @current_user %>
     <h1>Welcome, <%= @current_user.username %></h1>
+    <%= @current_user.email %>
   <% else %>
     <h1>Scratch Pastry</h1>
   <% end %>
