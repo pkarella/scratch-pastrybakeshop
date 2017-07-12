@@ -1,15 +1,25 @@
-<div class="jumbotron">
-  <% if @current_user %>
-    <h1>Welcome, <%= @current_user.username %></h1>
-    <%= @current_user.email %>
-  <% else %>
-    <h1>Scratch Pastry</h1>
-  <% end %>
+
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <% if @current_user %>
+        <h1>Welcome, <%= @current_user.username %></h1>
+        <%= @current_user.email %>
+        <% else %>
+        <h1>Scratch Pastry</h1>
+      <% end %>
+      </div>
+      <div class="panel-body">
+        <p>Take a look at our delectable desserts</p>
+
+        <button class="button btn"><%= link_to "View current Treats", products_path %></button>
+        <% if current_user && current_user.admin %>
+        <button class="button btn left"><%= link_to "Add a treat", new_product_path %></button>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
 </div>
-<div class="panel">
-  <p>Take a look at our delectable desserts</p>
-</div>
-<button class="button btn"><%= link_to "View current Treats", products_path %></button>
-<% if current_user && current_user.admin %>
-  <button class="button btn left"><%= link_to "Add a treat", new_product_path %></button>
-<% end %>
