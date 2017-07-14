@@ -7,19 +7,7 @@
 
 <%= render "layouts/errors", :object => @product %>
 
-<form class="form-horizontal">
-  <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-      <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
 
 
 
@@ -30,7 +18,7 @@
   <%= f.text_field :description%>
   <%= f.label :cost %>
   <%= f.text_field :cost %>
-  <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
-<%= f.file_field :avatar %>
+  <%= f.label :image, class: 'col-sm-2 control-label'  %>
+<%= f.file_field :image %>
   <%= f.submit  %>
 <% end %>
