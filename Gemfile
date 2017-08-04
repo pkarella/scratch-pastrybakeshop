@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'paperclip', '~> 4.1'
-
+gem 'youtube_it', '~> 2.4.0'
 
 
 group :development, :test do
