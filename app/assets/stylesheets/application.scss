@@ -14,6 +14,67 @@
  *= require_self
  */
  @import "bootstrap-sprockets";
- @import "variables";
+
    @import "bootstrap";
-   @import "bootswatch"
+@import url(https://fonts.googleapis.com/css?family=Indie%20Flower);
+
+   body,html{
+     height: 100%;
+     margin:0;
+     font-size: 16px;
+     font-family: "Lato", sans-serif;
+     font-weight: 400;
+     line-height: 1.8em;
+     color:#666;
+
+
+   }
+
+.navbar-brand{
+font-family: Indie Flower;
+font-size: 30px;
+overflow: hidden;
+}
+   .pimg1{
+  background-image: url('cake.jpg');
+   height: 60%;
+   position: relative;
+   opacity: 0.60;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   }
+
+   .section{
+     font-family: Indie Flower;
+     text-align: center;
+     font-size: 30px;
+     padding: 50px, 80px;
+   }
+
+   .ptext{
+     position: absolute;
+     top:50%;
+     width: 100%;
+     text-align: center;
+     color: black;
+     font-size: 27px;
+     letter-spacing: 8px;
+     text-transform: uppercase;
+   }
+
+   .ptext .border{
+     background-color: #111;
+     color: black;
+     padding:20px;
+   }
+
+    .ptext .border.trans{
+      background-color: transparent;
+    }
+   @media(max-width: 568px){
+     .pimg1{
+       background-attachment: scroll;
+     }
+   }
