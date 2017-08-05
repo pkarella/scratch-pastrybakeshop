@@ -6,7 +6,9 @@
     </section>
 
   <section class="section section-light">
-    <div  class="panel panel-default">
+
+      <div class="col-md-4">
+      <div  class="panel panel-default">
       <div id="panel" class="panel-heading">
         <% if @current_user %>
         <h1>Welcome, <%= @current_user.username %></h1>
@@ -24,6 +26,29 @@
         <% end %>
 
       </div>
+      </div>
+    </div>
+      <div class="col-md-4">
+        <div  class="panel panel-default">
+        <div id="panel" class="panel-heading">
+          <% if @current_user %>
+          <h1>Welcome, <%= @current_user.username %></h1>
+          <%= @current_user.email %>
+          <% else %>
+          <h1>Scratch Pastry</h1>
+        <% end %>
+        </div>
+        <div id="panelb" class="panel-body">
+          <p>Take a look at our delectable desserts</p>
+
+          <button class="button btn"><%= link_to "View current Treats", products_path %></button>
+          <% if current_user && current_user.admin %>
+          <button class="button btn left"><%= link_to "Add a treat", new_product_path %></button>
+          <% end %>
+
+        </div>
+        </div>
+      </div>
   </section>
 
   <div class="pimg1">
@@ -32,13 +57,3 @@
       </span>
     </div>
   </div>
-
-
-  <section class="section section-light">
-    <div class="panel panel-default">
-      <div class="panel-body">
-
-      </div>
-
-      </div>
-  </section>
