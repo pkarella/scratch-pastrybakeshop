@@ -4,7 +4,7 @@ class OrderItemsController < ApplicationController
      @item = @order.order_items.new(item_params)
      @order.save
      session[:order_id] = @order.id
-     redirect_to products_path
+     redirect_to cart_path
    end
    def destroy
        @order = current_order
