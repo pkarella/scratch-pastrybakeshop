@@ -5,8 +5,10 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    @current_user = current_user
-  end
+   @order_item = current_order.order_items.new
+   end
+
+
 
 
   def show
@@ -18,13 +20,13 @@ class ProductsController < ApplicationController
 
   def new
     @current_user = current_user
-    @product = @current_user.products.new
+    @product = Product.new
     render :new
   end
 
   def create
     @current_user = current_user
-    @product = @current_user.products.new(product_params)
+    @product = Product.new(product_params)
     if @product.save
       flash[:notice] = "Product successfully added!"
       redirect_to  products_path
