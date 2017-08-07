@@ -1,34 +1,23 @@
 <section class="pimg1">
+  <div class="ptext">
+    <span class='border trans'> Welcome to Scratch Pastry where only the finest ingredients are used to create our delectable treats
+    </span>
+  </div>
+</section>
 
-
-      <div class="ptext">
-        <span class='border trans'> Welcome to Scratch Pastry where only the finest ingredients are used to create our delectable treats
-        </span>
-      </div>
-
-    </section>
-
-
-
-
-
-
-
-  <section id="testy" class="section section-light">
-
-      <div class="col-md-4">
-      <div  class="panel panel-default">
+<section class="section section-light">
+  <div class="col-md-4">
+    <div  class="panel panel-default">
       <div id="panel" class="panel-heading">
         <% if @current_user %>
         <h1>Welcome, <%= @current_user.username %></h1>
         <%= @current_user.email %>
         <% else %>
         <h1>Scratch Pastry</h1>
-      <% end %>
+        <% end %>
       </div>
       <div id="panelb" class="panel-body">
         <p>Take a look at our delectable desserts</p>
-
         <button class="button btn"><%= link_to "View current Treats", products_path %></button>
         <% if current_user && current_user.admin %>
         <button class="button btn left"><%= link_to "Add a treat", new_product_path %></button>
@@ -63,33 +52,34 @@
       </span>
     </div>
   </div>
-<section class="section section-light">
-  <div class='row'>
-<div class="col-md-2">
-  <figure>
-    <img src="assets/apricots.jpg" alt="">
-  </figure>
-</div>
-<div class="col-md-2">
-  <figure>
-    <img src="assets/apricots.jpg" alt="">
-  </figure>
-</div>
-
-<div class="col-md-2">
-  <figure>
-    <img src="assets/apricots.jpg" alt="">
-  </figure>
-</div>
 
 
-<div class="col-md-2">
-  <figure>
-    <img src="assets/apricots.jpg" alt="">
-  </figure>
-</div>
-  </div>
 </section>
 <div class="pimg1">
+  <section class="section section-light">
+    <div class='row'>
+  <div class="col-md-2">
+    <figure>
+      <img id='pic1'src="assets/apricots.jpg" alt="">
+    </figure>
+  </div>
+  <div class="col-md-2">
+    <figure>
+      <img id='pic1'src="assets/apricots.jpg" alt="">
+    </figure>
+  </div>
 
+  <div class="col-md-2">
+    <figure>
+      <img id='pic1'src="assets/apricots.jpg" alt="">
+    </figure>
+  </div>
+
+
+  <div class="col-md-2">
+    <figure>
+      <img id='pic1'src="assets/apricots.jpg" alt="">
+    </figure>
+  </div>
+    </div>
   </div>

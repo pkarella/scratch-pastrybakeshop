@@ -54,26 +54,29 @@ figure:hover img {
 //grid
 figure{
   margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
   position: relative;
   transform: translateX(20px);
   transition: all 0.4s ease-in-out;
   opacity: 0;
+
+  // width: auto;
+
+}
+figure #pic1{
+  height: calc(100% - 15px);
+  width: auto;
+  display: inline-block;
   overflow: hidden;
-
-
+  align-items: center;
 }
 .is-showing{
   opacity: 1;
   transform: translateX(0px);
 }
-img {
-  border: none;
-  max-width: 150%;
-  height: auto;
-  width: 200px;
-  background: #ccc;
 
-}
 
 
 //end of responsive pictures and bottom
