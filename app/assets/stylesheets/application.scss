@@ -17,6 +17,67 @@
 
    @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Indie%20Flower);
+
+
+//responsive pictures at bottom
+// figure {
+//
+//   overflow: hidden;
+//   display: inline-block;
+//   margin-bottom: 2px;
+//
+//   margin-right: 2px;
+// }
+//
+// figure:nth-of-type(2n) {
+//   margin-right: 0;
+// }
+//
+@media screen and (min-width: 50em) {
+  figure {
+    width: calc(25% - 6px);
+  }
+
+  figure:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  figure:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+figure:hover img {
+  transform: scale(1.15);
+}
+
+//grid
+figure{
+  margin-bottom: 2px;
+  position: relative;
+  transform: translateX(20px);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
+
+
+}
+.is-showing{
+  opacity: 1;
+  transform: translateX(0px);
+}
+img {
+  border: none;
+  max-width: 150%;
+  height: auto;
+  width: 200px;
+  background: #ccc;
+
+}
+
+
+//end of responsive pictures and bottom
+
 //changes to entire site
    body,html{
      height: 100%;
@@ -25,21 +86,25 @@
      font-family: "Lato", sans-serif;
      font-weight: 400;
      line-height: 1.8em;
-     color:#666;
+     color:black;
 
 
    }
 //navbar
 .navbar-brand{
-font-family: Indie Flower;
-font-size: 30px;
+font-family: Lato;
+font-size: 4vw;
 overflow: hidden;
+position: absolute;
+color: #000;
 
+text-shadow: 1px 2px 2px white;
 }
 #navtop{
   background-color: #3e2723;
   margin: auto;
   height: 100px;
+  color: black;
   // background-image: url('choc.jpg');
   // background-repeat: no-repeat;
   // background-size: cover;
@@ -60,13 +125,14 @@ overflow: hidden;
    background-attachment: fixed;
    z-index: -1;
    }
+
 //panel in the center
    .section{
      font-family: Indie Flower;
      text-align: center;
      font-size: 30px;
      padding: 50px, 80px;
-
+     position: relative;
      margin: 0;
 
 }
@@ -81,6 +147,7 @@ font-family: "Lato";
  box-shadow: 0 2px 5px 0 #AEACAB, 0 2px 8px 0 #AEACAB;
 
 }
+
 //end of panel in center
 //text within the parallax image
    .ptext{
@@ -92,20 +159,9 @@ font-family: "Lato";
      font-size: 27px;
      letter-spacing: 8px;
      text-transform: uppercase;
+
    }
-  //  .pimg2{
-  //    position: relative;
-  //    background-image: url('choccake.jpg');
-  //    z-index: -2;
-  //    height: 60%;
-  //    width: auto;
-  //    background-size: contain;
-  //    background-repeat: no-repeat;
-  //    background-attachment: scroll;
-  //    overflow: hidden;
-  //    align-items: center;
-  //    background-color: transparentize(white, 0.4);
-  //  }
+
    .ptext .border{
      background-color: black;
      color: black;

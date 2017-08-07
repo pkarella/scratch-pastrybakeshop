@@ -15,3 +15,15 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+
+$(window).scroll(function(){
+  var wScroll =$(window).scrollTop();
+if(wScroll>$(document).height()-$(window).height()-50){
+  $('figure').each(function(i){
+  setTimeout(function(){
+    $('figure').eq(i).addClass('is-showing')
+  }, 150 *(i+2));
+
+});
+}
+})
